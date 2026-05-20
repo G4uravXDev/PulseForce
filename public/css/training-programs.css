@@ -1,0 +1,132 @@
+/* ══════════════════════════════════════
+   PulseForce — Training Programs Page
+   ══════════════════════════════════════ */
+
+.training-page { background: var(--cream); min-height: 100vh; }
+
+/* ── HERO ── */
+.training-hero {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 8rem 2rem 4rem; overflow: hidden;
+}
+.training-hero-bg {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3;
+}
+.training-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, rgba(28,28,30,0.9) 0%, rgba(201,79,44,0.2) 100%);
+}
+.training-hero-content { position: relative; z-index: 2; max-width: 700px; }
+.training-hero-content .section-eyebrow { color: rgba(201,79,44,0.8); margin-bottom: 1rem; }
+.training-hero-h1 {
+  font-family: 'Syne', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800; color: var(--cream); line-height: 1; letter-spacing: -0.03em; margin-bottom: 1.5rem;
+}
+.training-hero-h1 em { font-style: italic; font-family: 'Epilogue', sans-serif; font-weight: 300; color: var(--rust); }
+.training-hero-p { font-size: 1.1rem; color: rgba(240,235,226,0.7); line-height: 1.7; max-width: 550px; margin: 0 auto; }
+
+/* ── NAV ── */
+.training-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.2rem 3rem; background: rgba(28,28,30,0.85);
+  backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.training-nav .nav-logo { font-family:'Syne',sans-serif; font-weight:800; font-size:1.4rem; color:var(--cream); }
+.training-nav .nav-logo a { color: inherit; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+.training-nav .nav-links { display: flex; gap: 2rem; align-items: center; }
+.training-nav .nav-links a { color: rgba(240,235,226,0.7); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+.training-nav .nav-links a:hover { color: var(--rust); }
+.training-nav .nav-btn { background: var(--rust); color: var(--cream) !important; padding: 0.6rem 1.4rem; border-radius: 6px; font-weight: 600; }
+
+/* ── FILTERS ── */
+.training-filters {
+  display: flex; flex-direction: column; align-items: center; gap: 1.5rem;
+  padding: 3rem 2rem 1rem;
+}
+.filter-group { display: flex; align-items: center; gap: 0.5rem; }
+.filter-group-label {
+  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.85rem;
+  text-transform: uppercase; letter-spacing: 0.1em; color: var(--mid); margin-right: 0.5rem;
+}
+.filter-btn {
+  padding: 0.6rem 1.4rem; border: 1px solid var(--border); border-radius: 50px;
+  background: transparent; color: var(--charcoal); font-family: 'Epilogue', sans-serif;
+  font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: all 0.25s ease; text-decoration: none;
+}
+.filter-btn:hover { border-color: var(--rust); color: var(--rust); }
+.filter-btn.active { background: var(--charcoal); color: var(--cream); border-color: var(--charcoal); }
+
+/* ── PLAN HEADER ── */
+.plan-header { text-align: center; padding: 2rem 2rem 0; }
+.plan-header h2 { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--charcoal); margin-bottom: 0.5rem; }
+.plan-header .plan-meta { display: flex; justify-content: center; gap: 2rem; color: var(--muted); font-size: 0.95rem; flex-wrap: wrap; }
+.plan-header .plan-meta span { display: flex; align-items: center; gap: 0.3rem; }
+
+/* ── PROGRAM SUMMARY ── */
+.program-summary {
+  display: flex; justify-content: center; gap: 2rem; padding: 2rem; margin-bottom: 1rem;
+  background: var(--charcoal); border-radius: 16px; color: var(--cream); flex-wrap: wrap;
+}
+.summary-stat { text-align: center; }
+.summary-stat .stat-num { font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800; }
+.summary-stat .stat-label { font-size: 0.8rem; color: rgba(240,235,226,0.6); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem; }
+.summary-stat .stat-num.rust { color: var(--rust); }
+.summary-stat .stat-num.teal { color: var(--teal-lt, #2a9090); }
+
+/* ── DAY SECTION ── */
+.days-container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+.day-heading {
+  font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 700;
+  color: var(--charcoal); margin: 2rem 0 1rem; display: flex; align-items: center; gap: 0.5rem;
+}
+.day-heading .day-badge {
+  background: var(--rust); color: #fff; font-size: 0.7rem; padding: 0.25rem 0.7rem;
+  border-radius: 50px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+}
+.day-heading .day-muscle { margin-left: auto; font-size: 0.85rem; font-weight: 400; color: var(--muted); }
+
+/* ── EXERCISE GRID ── */
+.exercise-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.2rem; margin-bottom: 1rem; }
+
+.exercise-card {
+  background: var(--card-bg, #faf8f4); border: 1px solid var(--border); border-radius: 14px;
+  padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.exercise-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.07); }
+
+.exercise-name {
+  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem;
+  color: var(--charcoal); margin-bottom: 0.3rem;
+}
+.exercise-target { font-size: 0.8rem; color: var(--rust); font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.exercise-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.5; margin-bottom: 0.8rem; }
+
+.exercise-stats { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.ex-stat {
+  padding: 0.3rem 0.7rem; border-radius: 6px; font-size: 0.78rem; font-weight: 600;
+}
+.ex-stat.sets { background: rgba(201,79,44,0.1); color: var(--rust); }
+.ex-stat.reps { background: rgba(26,107,107,0.1); color: var(--teal); }
+.ex-stat.rest { background: rgba(74,74,74,0.08); color: var(--mid); }
+
+/* ── REST DAY ── */
+.rest-day-card {
+  background: linear-gradient(135deg, var(--charcoal) 0%, #2a2a2e 100%);
+  border-radius: 14px; padding: 2.5rem; text-align: center; color: var(--cream);
+}
+.rest-day-card .rest-icon { font-size: 2.5rem; margin-bottom: 0.8rem; }
+.rest-day-card .rest-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.2rem; margin-bottom: 0.3rem; }
+.rest-day-card .rest-desc { font-size: 0.9rem; color: rgba(240,235,226,0.6); }
+
+/* ── BACK ── */
+.training-back { text-align: center; padding: 2rem 2rem 4rem; }
+.training-back a { color: var(--rust); text-decoration: none; font-weight: 600; font-size: 1rem; transition: opacity 0.2s; }
+.training-back a:hover { opacity: 0.7; }
+
+@media(max-width:768px) {
+  .training-nav { padding: 1rem 1.5rem; }
+  .filter-group { flex-wrap: wrap; justify-content: center; }
+  .exercise-grid { grid-template-columns: 1fr; }
+  .program-summary { gap: 1rem; }
+}

@@ -1,0 +1,53 @@
+/.phpunit.cache
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/public/profile-images
+/storage/*.key
+/storage/pail
+/vendor
+.env
+.env.backup
+.env.production
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE / Editor directories
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+
+# IDE / Editor files
+*.swp
+*.swo
+*~
+.phpactor.json
+.phpunit.result.cache
+
+# Auth
+/auth.json
+
+# Homestead
+Homestead.json
+Homestead.yaml
+
+# OS generated files
+ehthumbs.db
+Desktop.ini
+
+# Composer
+composer.lock
+
+# npm
+package-lock.json
+
+# Laravel Mix / Vite build
+/public/mix-manifest.json
+
+# Debug
+npm-debug.log
+yarn-error.log
