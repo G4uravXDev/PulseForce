@@ -266,7 +266,7 @@ PulseForce/
 
 ---
 
-## 🛣️ Route Reference
+## 🛣️ Route References
 
 ### Public Routes
 
